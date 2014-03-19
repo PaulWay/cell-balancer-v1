@@ -47,8 +47,8 @@ this paper:
 http://www.mdpi.com/1996-1073/6/4/2149/pdf‎
 
 and has been around since at least 2001 (see Moore, S.W.; Schneider, 
-P.J. "A Review of Cell Equalization Methods for Lithium Ion and Lithium 
-Polymer Battery Systems". In Proceedings of the SAE 2001 World Congress, 
+P.J. *A Review of Cell Equalization Methods for Lithium Ion and Lithium 
+Polymer Battery Systems*. In Proceedings of the SAE 2001 World Congress, 
 Detroit, MI, USA, 5–8 March 2001.).
 
 In its simplest sense, it means connecting a capacitor across the 
@@ -89,17 +89,19 @@ Microprocessor
 
 The code for each capacitor drive group is fairly simple:
 
-1) Turn on optorelays for cell A.
-2) Wait (turn on delay) + (shuttle time)
-3) Turn off optorelays for cell A.
-4) Wait (turn off delay) + (dead time)
-5) Turn on optorelays for cell B.
-6) Wait (turn on delay) + (shuttle time)
-7) Turn off optorelays for cell B.
-8) Wait (turn off delay) + (dead time)
+  1. Turn on optorelays for cell A.
+  2. Wait (turn on delay) + (shuttle time)
+  3. Turn off optorelays for cell A.
+  4. Wait (turn off delay) + (dead time)
+  5. Turn on optorelays for cell B.
+  6. Wait (turn on delay) + (shuttle time)
+  7. Turn off optorelays for cell B.
+  8. Wait (turn off delay) + (dead time)
 
 The overall speed of this circuit is:
+
   ( (turn on delay) + (turn off delay)  + (shuttle time) + (dead time) ) * 2
+  
 The smaller this time, the faster charge can be shuttled between two
 adjacent cells.
 
@@ -125,3 +127,4 @@ This too must not be too long - it is time in which nothing is
 happening and cells are not being balanced.  It is suggested that this
 time be at least half the turn off delay of the optorelay.
 
+Optimising the 
